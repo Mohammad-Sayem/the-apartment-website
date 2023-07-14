@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://mirza_danish_baig:00000000@cluster0.kum30lc.mongodb.net/apartment-todo"
+app.config["MONGO_URI"] = # enter your mongo db atlas uri here
 mongo = PyMongo(app)
 
 app.secret_key ='super-secret-key'
@@ -13,8 +13,8 @@ app.config['MAIL_SERVER'] ='smtp.gmail.com'
 app.config['MAIL_PORT' ]= 465
 app.config['MAIL_USE_TLS' ]= False
 app.config['MAIL_USE_SSL']=True
-app.config['MAIL_USERNAME'] = 'mirzadanish7218@gmail.com'
-app.config['MAIL_PASSWORD'] ='sgmcsziwsqstvkyd'
+app.config['MAIL_USERNAME'] = 'mail@gmail.com'
+app.config['MAIL_PASSWORD'] ='' #password
 
 
 
@@ -26,7 +26,7 @@ def hello_world():
     if request.method=='POST':
         mail.send_message("the mail from mirza",
         sender="mirzadanish7218@gmail.com",
-        recipients=["sayam.1999.sm@gmail.com"],
+        recipients=["mail@gmail.com"],
         body = 'Hello Flask message sent from Flask-Mail')
         print("mail to dedo")
        
