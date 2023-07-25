@@ -8,21 +8,21 @@
                 <h3>Rental</h3><br>
                 <h3>from 100rs</h3><br>
                 <h4>per night</h4><br><br>
-                <div class="d">
+               <div class="d">
                     <label for="checkin"><i class="fa-regular fa-calendar-check"></i>Check In</label> <br>
-                    <input type="text" id="checkin" placeholder="DD MM YYYY">
+                    <input type="date" id="checkin" name="checkin" value="submit form" placeholder="DD MM YYYY">
                     <br>
                     <label for="checkout"><i class="fa-regular fa-calendar"></i>Check Out</label> <br>
-                    <input type="text" id="checkout" placeholder="DD MM YYYY">
+                    <input type="date" id="checkout" name="check-out" placeholder="DD MM YYYY">
                     <br>
                     <label for="adults"><i class="fa fa-male"></i>Adults</label> <br>
-                    <input type="number" value="1" id="adults" placeholder="DD MM YYYY">
+                    <input type="number" value="1" id="adults" name="adults" placeholder="DD MM YYYY">
                     <br>
                     <label for="kids"><i class="fa-solid fa-child-reaching"></i>Kids</label> <br>
-                    <input type="number" value="0" id="kids" placeholder="DD MM YYYY">
+                    <input type="number" value="0" id="kids" name="kids" placeholder="DD MM YYYY">
                     <br>
-                    <button class="search-btn">
-                        <i class="fa fa-search "></i> Search availablity
+                    <button class="search-btn" type="submit">
+                        <i class="fa fa-search " ></i> Submit
                     </button>
                 </div>
                 <div class="e">
@@ -140,9 +140,9 @@
                 <p class="q">Questions? Go ahead, ask them:</p>
 
                 <form action="/" method="post">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Massage">
+                  <input type="text" placeholder="Name" id="name" name="name">
+                <input type="text" placeholder="Email" name="email">
+                <input type="text" placeholder="Massage" name="massage">
 
 
                     <button class="send-massage">Send a Massage</button>
