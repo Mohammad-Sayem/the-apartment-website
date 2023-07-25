@@ -23,12 +23,24 @@ mail = Mail(app)
 
 @app.route("/",methods=['GET','POST'])
 def hello_world():
-    if request.method=='POST':
+    if "name" in request.form and request.method=='POST':
+        name=request.form.get('name')
+        email=request.form.get('email')
+        massage=request.form.get('massage')
         mail.send_message("the mail from mirza",
         sender="mirzadanish7218@gmail.com",
         recipients=["mail@gmail.com"],
-        body = 'Hello Flask message sent from Flask-Mail')
-        print("mail to dedo")
+        body = f"the name of user is {name} \nthe email of user is {email} \nthe massage from the user is {massage}")
+        
+
+    if "checkin" in request.form and request.method=='POST':
+        checkin=request.form.get("checkin")
+        checkout=request.form.get("check-out")
+        adults=request.form.get("adults")
+        kids=request.form.get("kids")
+        mylist={"checkin":checkin ,"checkout":checkout,"adults":adults,"kids":kids}
+        mongo.db.Users.insert_one(mylist) 
+    
        
 
 
